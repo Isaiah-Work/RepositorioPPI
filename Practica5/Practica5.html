@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto Intermedio</title>
+    <script type="text/javascript" src="script.js"></script>
+    <link rel="stylesheet" href="../stylesheet.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&family=Roboto+Slab:wght@700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <header>
+        <h1>Proyecto Intermedio
+        </h1>
+        <nav class="navegacion">
+            <ul>
+                <li><a href="../Practica2/siu.anahuac.mx.html">Práctica 2.</a></li>
+                <li><a href="../Practica3/Practica3.html">Práctica 3.</a></li>
+                <li><a href="../Practica4/Practica4.html">Práctica 4.</a></li>
+                <li><a href="../Practica5/Practica5.html">Práctica 5.</a></li>            
+                <li><a href="../About/About.html">Sobre mí</a></li>
+                <li><a href="../SegundaParte/segundaparte.html">Segunda Parte...</a></li>                           
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+    <section id="main">
+        <h2>Formulario y Tabla  </h2>
+        <ol>
+        <li>El formulario deberá tener un button que llame a una función en JS que se encargue de validar que todos los campos no se encuentren vacíos (indicar cual se encuentra vacío).</li> 
+        <li>Una vez que todos los campos estén llenos, al presionar el botón deberá escribirse el la información en un nuevo renglón de la tabla y borrar los campos del formulario.</li>
+        <li>La tabla debe alternar estilo entre renglones (con dos estilos es suficiente, puede usar la funcionalidad incluida en CSS) o reutilizar lo realizado en una práctica previa.</li>
+        <li>La tabla deberá tener la propiedad hover (resaltado del renglón cuando el cursor pase sobre el renglón, puede usar la funcionalidad incluida en CSS).</li>
+        <li>Usar archivos independientes para HTML, CSS y JS.</li>
+        </ol>
+    </section>
+    
+    <section id="caja1">
+    <form id="formulario" action="">
+        Nombre: <input type="text" name="texto" id="nombre">
+        Email: <input type="email" name="" id="email">
+        <br>¿Qué prefiere?
+        <br>Pizza con Piña<input value="Con piña" type="radio" name="unaop" id="pizzap">
+        Pizza Normal<input value="Normal" type="radio" name="unaop" id="pizzan">
+        Nada<input value="Nada" type="radio" name="unaop" id="nada">
+        <br>Eliga si los colores que le gustan:<br>
+        Verde <input type="checkbox" name="color_gusto" id="ver" value="Verde">
+        Azul <input type="checkbox" name="color_gusto" id="azu" value="Azul">
+        Rojo <input type="checkbox" name="color_gusto" id="roj" value="Rojo">
+        <br>Eliga su color favorito <input type="color" name="" id="color">
+        <br>Fecha de Nacimiento<input type="datetime-local" name="" id="fechanac">
+        <br>
+        ¿Pila Social?
+        <input type="range" name="" id="pila">
+        <button type="button" onclick="enviardatos()">Submit!</button> 
+        <!--Llamar función JS Validación desde el boton-->
+    </form>
+    </section>
+    <!--Agregar Tabla -->
+    <section id="caja2">
+    <table id="tabla_res"></table>
+    </section>
+    </div>
+    <footer>
+        <p>© 2024 Mi Sitio Web. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

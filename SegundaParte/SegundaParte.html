@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript" src="script.js"></script>
+    <link rel="stylesheet" href="../stylesheet.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&family=Roboto+Slab:wght@700&display=swap" rel="stylesheet">
+</head>
+    
+    <style>
+        body{
+            background-color: #EFEFEF;
+            font-family:'Poppins', sans-serif;;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        .ventana{
+            position: relative;
+            width: 500px;
+            border-radius: 5px solid #990033;
+            -webkit-border-radius: 10px;
+            color: #ffffff;
+            padding: 10px 20px 10px 20px;
+            display: inline-block;
+            background-color: #990033;
+            margin: 10px;
+            text-align: center;
+            -webkit-box-shadow: 5px 5px 5px 0px rgb(0, 0, 0, 0.30); 
+            box-shadow: 5px 5px 5px 0px rgb(0, 0, 0, 0.30);
+            font-size: 20px;
+
+        }
+        
+        .agregartarea{
+            padding: 20px;
+            
+        }
+        #listatarea{
+            padding: 20px;
+        }
+
+        .agregartarea #tarea{
+            width:400px;
+            height: 50px;
+            padding: 20px;
+            color: #FFFFFF;
+            
+            border-radius: 0px solid #660000;
+            -webkit-border-radius: 1px;
+            background-color: #660000;
+            border: 0px none transparent;
+            
+            outline-width: 5px;
+            outline-style: solid;
+            outline-color: #660000;
+            outline-offset: 0px;
+
+            font-size: 20px;
+
+            display: inline-block;
+            
+        }
+        .agregartarea #agboton{
+            
+            display: inline-block;
+
+            border: 0px none transparent;
+            border-radius: 0px none transparent;
+            background-color: transparent;
+
+            padding-left: 20px;
+            width: 30px;
+            height: 30px;
+
+            font-size: 30px;
+            color: white;
+            
+        }
+
+        .inttarea{
+            width: inherit;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            padding: 10px;
+            margin: 10px;
+
+            border: 0px none transparent;
+            border-radius: 5px solid #FFFFFF;
+            -webkit-border-radius: 10px;
+            
+        }
+
+        .inttarea:hover{
+            background-color: #660000;
+        }
+
+        .inttarea input[type="checkbox"]{
+            width: 25px;
+            height: 25px;
+            margin-right: 10px;
+        }
+        
+        .inttarea .borrar{
+            color: wheat;
+            cursor: pointer;
+            margin-left: 10px; /* Espacio entre el texto de la tarea y "BORRAR" */
+        }
+
+    </style>
+<body>
+    <header>
+        <h1>Proyecto Intermedio
+        </h1>
+        <nav class="navegacion">
+            <ul>
+                <li><a href="../Practica2/siu.anahuac.mx.html">Práctica 2.</a></li>
+                <li><a href="../Practica3/Practica3.html">Práctica 3.</a></li>
+                <li><a href="../Practica4/Practica4.html">Práctica 4.</a></li>
+                <li><a href="../Practica5/Practica5.html">Práctica 5.</a></li>            
+                <li><a href="../About/About.html">Sobre mí</a></li>
+                <li><a href="../SegundaParte/segundaparte.html">Segunda Parte...</a></li>                
+            </ul>
+        </nav>
+    </header>
+
+
+        <h3>To-do List by Isaiah</h3>
+        <div class="ventana">
+        
+        
+        <div class="agregartarea">
+            <input type="text" name="agregartarea" id="tarea"> 
+            <button type="button" id="agboton" onclick="agregar()">+</button>
+        </div>
+        
+        <div id="listatarea">
+            
+        </div>
+
+    </div>
+
+    
+
+</body>
+</html>

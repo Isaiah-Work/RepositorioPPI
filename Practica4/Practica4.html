@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto Intermedio</title>
+    <link rel="stylesheet" href="../stylesheet.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&family=Roboto+Slab:wght@700&display=swap" rel="stylesheet">
+    <script>
+        function evaluar(){
+            var valor = document.getElementById("formularioCalificacion").value;
+            var texto = document.getElementById("parrafoCalificacion").innerHTML;
+            console.log("Valor leído: " + valor);
+            if (valor < 0 || valor > 10){
+                document.getElementById("parrafoCalificacion").innerHTML = "ERROR: NO PUEDES PONER NÚMEROS MENORES A 0 O MAYORES A 10";
+            }else if(valor < 6){
+                document.getElementById("parrafoCalificacion").innerHTML = "NA";
+            }else if(valor < 7.5){
+                document.getElementById("parrafoCalificacion").innerHTML = "S";
+            }else if(valor < 9){
+                document.getElementById("parrafoCalificacion").innerHTML = "B";
+            }else if(valor < 10){
+                document.getElementById("parrafoCalificacion").innerHTML = "MB";
+            }else if(valor == 10){
+                document.getElementById("parrafoCalificacion").innerHTML = "LAP";
+            }
+        }
+
+        function evaluar2(){
+            var resultado = 1;
+            var n = document.getElementById("formularioFactorial").value;
+            if(n < 0){
+                document.getElementById("parrafoFactorial").innerHTML = "NO PUEDES PONER " + n + " porque es < 0";                
+            }else if(n == 0){
+                n = 1;
+                resultado = resultado * n;                        
+                document.getElementById("parrafoFactorial").innerHTML = resultado;
+            }else{ 
+                console.log("Valor de n: " + n);
+                for(var i = n; i >= 1; i--){
+                    resultado = resultado * i;
+                    console.log("Resultado = " + resultado);
+                } 
+                document.getElementById("parrafoFactorial").innerHTML = resultado;
+            }
+        }
+
+        function evaluar3(){
+            var nombre = document.getElementById("nombre").value;
+            var correo = document.getElementById("correo").value;
+            var edad = document.getElementById("edad").value;
+            var genero = document.querySelector('input[name="genero"]:checked').value;
+            var fecha = document.getElementById("fecha").value;
+            var colorfav = document.getElementById("colorfav").value;
+            var resultado = "Nombre: " + nombre + "<br>" +
+                            "Correo: " + correo + "<br>" +
+                            "Edad: " + edad + "<br>" +
+                            "Género: " + genero + "<br>" +
+                            "Fecha de nacimiento: " + fecha + "<br>" +
+                            "Color favorito: " + colorfav;
+
+            document.getElementById("parrafoDatos").innerHTML = resultado;
+        }
+    </script>
+    </head>
+<body>
+    <header>
+        <h1>Proyecto Intermedio
+        </h1>
+        <nav class="navegacion">
+            <ul>
+                <li><a href="../Practica2/siu.anahuac.mx.html">Práctica 2.</a></li>
+                <li><a href="../Practica3/Practica3.html">Práctica 3.</a></li>
+                <li><a href="../Practica4/Practica4.html">Práctica 4.</a></li>
+                <li><a href="../Practica5/Practica5.html">Práctica 5.</a></li>            
+                <li><a href="../About/About.html">Sobre mí</a></li>
+                <li><a href="../SegundaParte/segundaparte.html">Segunda Parte...</a></li>                           
+            </ul>
+        </nav>
+    </header>
+    <div>
+        <!-- Calificación -->
+        <section class="main33">
+            <h1>Introduce tu calificación</h1>
+            <input type="number" id="formularioCalificacion">
+            <button type="number" onclick="evaluar()">Calcular</button>
+            <p id="parrafoCalificacion"></p>
+        </section>
+
+        
+
+        <!-- Factorial -->
+        <section class="main33">
+            <h1>Introduce tu número factorial</h1>
+            <input type="number" id="formularioFactorial">
+            <button type="number" onclick="evaluar2()">Calcular</button>
+            <p id="parrafoFactorial"></p>
+        </section>
+
+
+        <!-- Datos personales -->
+        <section class="main33">
+            <h1>Introduce tus datos</h1>
+            <form action="">
+                Nombre: <input type="text" id="nombre" required><br><br>
+                Correo: <input type="email" id="correo" required><br><br>
+                Edad: <input type="number" id="edad" required><br><br>
+                Género: 
+                <input type="radio" name="genero" value="Hombre">Hombre
+                <input type="radio" name="genero" value="Mujer">Mujer
+                <input type="radio" name="genero" value="No-Binario">No-Binario
+                <input type="radio" name="genero" value="Prefiero no decirlo">Prefiero no decirlo<br><br>
+                Fecha de nacimiento: <input type="date" id="fecha" required><br><br>
+                Color favorito: <input type="color" id="colorfav"><br><br>
+            </form>
+            <button type="button" onclick="evaluar3()">Enviar</button>
+            <p id="parrafoDatos"></p>
+        </section>
+    </div>
+    <footer>
+        <p>© 2024 Mi Sitio Web. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
